@@ -8,8 +8,8 @@ import org.springframework.boot.system.ApplicationPidFileWriter;
 public class OnlineUtilsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication application = new SpringApplication(OnlineUtilsApplication.class, args);
-		application.addListeners(new ApplicationPidFileWriter("./bin/app.pid"));
-		application.run();
+		SpringApplication application = new SpringApplication(OnlineUtilsApplication.class);
+		application.addListeners(new ApplicationPidFileWriter("./onlineutils.pid"));
+		application.run(args);
 	}
 }
